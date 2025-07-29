@@ -1,9 +1,12 @@
 from flask import Flask, request, render_template_string
 import requests, datetime, math
 
-# Configuración
-API_KEY = 'TU_API_KEY'
-ENTRY_FORM_ID = 'ID_FORM_INGRESO'
+import os  # añade esta importación si no está al principio del archivo
+
+# Configuración: leer valores de las variables definidas en Render
+API_KEY = os.environ['API_KEY']
+ENTRY_FORM_ID = os.environ['ENTRY_FORM_ID']
+
 
 ingreso_qids = {'idUnico': '3', 'placa': '4'}
 
